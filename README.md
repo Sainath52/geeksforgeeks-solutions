@@ -25,8 +25,11 @@ This repository contains my solutions to various data structures and algorithms 
 
 | Problem Name | Difficulty | Topic | Solution Link |
 | :--- | :---: | :--- | :--- |
+| Concatenation of Array | Easy | Arrays | [View Code](./Concatenation%20of%20Array) |
+| Contains Duplicate | Easy | Arrays / Hashset | [View Code](./Contains%20Duplicate) |
 | Indexes of Subarray Sum | Medium | Arrays / Sliding Window | [View Code](./Indexes%20of%20Subarray%20Sum) |
 | Missing in Array | Easy | Arrays / Math | [View Code](./Missing%20in%20Array) |
+| Score of a String | Easy | Strings / ASCII | [View Code](./Score%20of%20a%20String) |
 | Second Largest | Easy | Arrays | [View Code](./Second%20Largest) |
 
 > *Note: More solutions are added regularly as I progress through the GFG practice tracks.*
