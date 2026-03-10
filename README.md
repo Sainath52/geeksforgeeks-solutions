@@ -4,7 +4,19 @@
 ![Language](https://img.shields.io/badge/Language-Java-orange?style=for-the-badge&logo=java)
 ![Contributions](https://img.shields.io/badge/Contributions-Welcome-brightgreen?style=for-the-badge)
 
-A comprehensive collection of optimized solutions to **GeeksforGeeks (GFG)** practice problems. This repository is designed to document my problem-solving journey, focusing on efficient algorithms and clean code.
+A comprehensive collection of optimized solutions to **GeeksforGeeks (GFG)** practice problems. This repository documents my problem-solving journey, focusing on efficient algorithms and clean code.
+
+## 📊 Daily Progress & Stats
+![Total Solved](https://img.shields.io/badge/Total%20Solved-09-blue?style=flat-square)
+![Current Streak](https://img.shields.io/badge/Current%20Streak-3%20Days-firebrick?style=flat-square)
+
+| Difficulty | Count |
+| :--- | :--- |
+| 🟢 Easy | 8 |
+| 🟡 Medium | 1 |
+| 🔴 Hard | 0 |
+
+---
 
 ## 📌 Table of Contents
 * [About the Repository](#about-the-repository)
