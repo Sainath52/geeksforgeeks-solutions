@@ -7,13 +7,13 @@
 A comprehensive collection of optimized solutions to **GeeksforGeeks (GFG)** practice problems. This repository documents my problem-solving journey, focusing on efficient algorithms and clean code.
 
 ## 📊 Daily Progress & Stats
-![Total Solved](https://img.shields.io/badge/Total%20Solved-09-blue?style=flat-square)
+![Total Solved](https://img.shields.io/badge/Total%20Solved-12-blue?style=flat-square)
 ![Current Streak](https://img.shields.io/badge/Current%20Streak-3%20Days-firebrick?style=flat-square)
 
 | Difficulty | Count |
 | :--- | :--- |
-| 🟢 Easy | 8 |
-| 🟡 Medium | 1 |
+| 🟢 Easy | 10 |
+| 🟡 Medium | 2 |
 | 🔴 Hard | 0 |
 
 ---
@@ -37,15 +37,18 @@ This repository contains my solutions to various data structures and algorithms 
 
 | Problem Name | Difficulty | Topic | Solution Link |
 | :--- | :---: | :--- | :--- |
-| Concatenation of Array | Easy | Arrays | [View Code](./Concatenation%20of%20Array) |
-| Contains Duplicate | Easy | Arrays / Hashset | [View Code](./Contains%20Duplicate) |
-| Indexes of Subarray Sum | Medium | Arrays / Sliding Window | [View Code](./Indexes%20of%20Subarray%20Sum) |
-| Is Subsequence | Easy | Strings / Two Pointers | [View Code](./Is%20Subsequence) |
-| Missing in Array | Easy | Arrays / Math | [View Code](./Missing%20in%20Array) |
-| Replace Elements With Greatest... | Easy | Arrays | [View Code](./Replace%20Elements%20With%20Greatest%20Element%20On%20Ri) |
-| Score of a String | Easy | Strings / ASCII | [View Code](./Score%20of%20a%20String) |
-| Second Largest | Easy | Arrays | [View Code](./Second%20Largest) |
-| Valid Anagram | Easy | Strings / Hash Table | [View Code](./Valid%20Anagram) |
+| Append Characters to String... | 🟡 Medium | Strings / Two Pointers | [View Code](./Append%20Characters%20to%20String%20to%20Make%20Subsequ) |
+| Concatenation of Array | 🟢 Easy | Arrays | [View Code](./Concatenation%20of%20Array) |
+| Contains Duplicate | 🟢 Easy | Arrays / Hashset | [View Code](./Contains%20Duplicate) |
+| Indexes of Subarray Sum | 🟡 Medium | Arrays / Sliding Window | [View Code](./Indexes%20of%20Subarray%20Sum) |
+| Is Subsequence | 🟢 Easy | Strings / Two Pointers | [View Code](./Is%20Subsequence) |
+| Length of Last Word | 🟢 Easy | Strings | [View Code](./Length%20Of%20Last%20Word) |
+| Max Consecutive Ones | 🟢 Easy | Arrays | [View Code](./Max%20Consecutive%20Ones) |
+| Missing in Array | 🟢 Easy | Arrays / Math | [View Code](./Missing%20in%20Array) |
+| Replace Elements With Greatest... | 🟢 Easy | Arrays | [View Code](./Replace%20Elements%20With%20Greatest%20Element%20On%20Ri) |
+| Score of a String | 🟢 Easy | Strings / ASCII | [View Code](./Score%20of%20a%20String) |
+| Second Largest | 🟢 Easy | Arrays | [View Code](./Second%20Largest) |
+| Valid Anagram | 🟢 Easy | Strings / Hash Table | [View Code](./Valid%20Anagram) |
 
 > *Note: More solutions are added regularly as I progress through the GFG practice tracks.*
 
