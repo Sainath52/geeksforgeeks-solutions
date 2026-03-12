@@ -1,0 +1,116 @@
+// Consider an array A with N elements. The task is to identify the shortest possible contiguous subarray where the Bitwise OR of the elements within the subarray equals the Bitwise OR of the elements outside the subarray. Additionally, determine the count of all such minimal-length subarrays that meet this condition.
+
+Note:
+
+The subarray of 
+ is a contiguous part of the array 
+, i. e. the array 
+ for some 
+.
+If in the given array there exists no such subarray for which the Bitwise OR of the elements within the subarray equals the Bitwise OR of the elements, print a single integer 
+.
+Input format
+
+The first line contains a single integer 
+, which denotes the number of test cases.
+For each test case:
+The first line contains 
+ denoting the size of array 
+.
+The second line contains 
+ space-separated integers, denoting the elements of 
+.
+Output format
+
+For each test case, If the answer exists, print 2 integers, where the first one is the shortest possible contiguous subarray where the Bitwise OR of the elements within the subarray equals the Bitwise OR of the elements outside the subarray, & the second one is the count of all such minimal-length subarrays, in a new line, Otherwise If in the given array there exists no such subarray for which the Bitwise OR of the elements within the subarray equals the Bitwise OR of the elements, print a single integer -1, in a new line.
+
+// Code in Java : Optimized Solution 
+ import java.util.*;
+import java.io.*;
+
+public class TestClass {
+    public static void main(String[] args) throws IOException {
+        FastReader sc = new FastReader(System.in);
+        PrintWriter out = new PrintWriter(System.out);
+        
+        int T = sc.nextInt();
+        while (T-- > 0) {
+            int N = sc.nextInt();
+            int[] A = new int[N];
+            int[] totalBits = new int[31];
+            int totalOR = 0;
+            
+            for (int i = 0; i < N; i++) {
+                A[i] = sc.nextInt();
+                totalOR |= A[i];
+                for (int b = 0; b < 31; b++) {
+                    if (((A[i] >> b) & 1) == 1) totalBits[b]++;
+                }
+            }
+
+            // Edge Case: If the total OR is 0, no non-trivial subarray works
+            if (totalOR == 0) {
+                out.println("-1");
+                continue;
+            }
+
+            int minLen = Integer.MAX_VALUE;
+            long count = 0;
+            int[] winBits = new int[31];
+            int left = 0;
+
+            for (int right = 0; right < N; right++) {
+                for (int b = 0; b < 31; b++) {
+                    if (((A[right] >> b) & 1) == 1) winBits[b]++;
+                }
+
+                while (left <= right) {
+                    int currentSubOR = 0;
+                    int currentOutOR = 0;
+                    boolean possible = true;
+
+                    for (int b = 0; b < 31; b++) {
+                        if (winBits[b] > 0) currentSubOR |= (1 << b);
+                        if (totalBits[b] - winBits[b] > 0) currentOutOR |= (1 << b);
+                    }
+
+                    if (currentSubOR == currentOutOR) {
+                        int len = right - left + 1;
+                        if (len < minLen) {
+                            minLen = len;
+                            count = 1;
+                        } else if (len == minLen) {
+                            count++;
+                        }
+                        
+                        // Shrink window
+                        for (int b = 0; b < 31; b++) {
+                            if (((A[left] >> b) & 1) == 1) winBits[b]--;
+                        }
+                        left++;
+                    } else {
+                        break;
+                    }
+                }
+            }
+
+            if (minLen == Integer.MAX_VALUE) out.println("-1");
+            else out.println(minLen + " " + count);
+        }
+        out.flush();
+    }
+
+    static class FastReader {
+        BufferedReader br;
+        StringTokenizer st;
+        public FastReader(InputStream in) { br = new BufferedReader(new InputStreamReader(in)); }
+        String next() {
+            while (st == null || !st.hasMoreElements()) {
+                try { st = new StringTokenizer(br.readLine()); } 
+                catch (Exception e) { }
+            }
+            return st.nextToken();
+        }
+        int nextInt() { return Integer.parseInt(next()); }
+    }
+}
