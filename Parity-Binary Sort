@@ -1,0 +1,42 @@
+// You are given an array 
+ of 
+ integers. Your task is to implement a sorting algorithm that arranges the numbers in the array based on following conditions and return that array:
+1. Numbers with an even count of set bits should appear first in ascending order.
+2. Following that, numbers with an odd count of set bits should be arranged in ascending order.
+
+Input Format:
+
+Note: This is the input format that you must use to provide custom input (available above the Compile and Test button).
+// Code in Java : Optimized Solution 
+ 
+import java.util.*;
+class TestClass {
+    public static void main(String args[] ) throws Exception {
+Scanner sc = new Scanner(System.in);
+int t = sc.nextInt();
+while(t-->0)
+{
+    int n = sc.nextInt();
+    List<Integer> even = new ArrayList<>();
+    List<Integer> odd = new ArrayList<>();
+    for(int i = 0;i<n;i++)
+    {
+        int val = sc.nextInt();
+        if(Integer.bitCount(val) % 2 == 0)
+        {
+            even.add(val);
+        }
+        else{
+            odd.add(val);
+        }
+    }
+    Collections.sort(even);
+    Collections.sort(odd);
+    StringBuilder sb = new StringBuilder();
+    for(int x : even) sb.append(x).append(" ");
+    for(int x : odd) sb.append(x).append(" ");
+    System.out.println(sb.toString().trim());
+}
+
+    }
+}
